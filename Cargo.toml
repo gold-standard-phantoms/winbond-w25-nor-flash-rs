@@ -1,0 +1,12 @@
+[package]
+name = "winbond-w25-nor-flash-rs"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "winbond_w25_nor_flash_rs"
+path = "src/lib.rs"
+
+[dependencies]
+defmt = "0.3"
+embedded-hal = { version = "1", features = ["defmt-03"] }
