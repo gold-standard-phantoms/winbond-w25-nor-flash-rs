@@ -1,9 +1,10 @@
 /// Refer to datasheet:
 /// https://datasheet.lcsc.com/lcsc/1912111437_Winbond-Elec-W25Q128JVSIQ_C113767.pdf
 use crate::error::Error;
-use crate::{identification::Identification, traits::HardwareFlashDevice};
+use crate::identification::Identification;
 use core::fmt::Debug;
 use embedded_hal::spi::{Operation, SpiDevice};
+use hardware_traits::HardwareFlashDevice;
 
 // #[derive(Debug)]
 pub struct FlashSpi<SPI> {
