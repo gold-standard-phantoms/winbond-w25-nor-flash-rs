@@ -173,7 +173,6 @@ where
 {
     pub fn is_busy(&mut self) -> Result<bool, Error<SPI>> {
         let status = self.read_status()?;
-        defmt::info!("Initial status: {:?}", status);
         Ok(!(status & Status::BUSY).is_empty())
     }
     pub fn is_wel(&mut self) -> Result<bool, Error<SPI>> {
@@ -190,7 +189,7 @@ where
             }
             defmt::warn!("Flash is not ready: {:?}", status);
         };
-        defmt::info!("Initial status: {:?}", status);
+        defmt::debug!("Initial status: {:?}", status);
         Ok(this)
     }
 
