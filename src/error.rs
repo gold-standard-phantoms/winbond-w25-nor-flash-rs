@@ -1,12 +1,12 @@
 use core::fmt::{self, Debug};
 use defmt::{Format, Formatter};
-use embedded_hal::spi::SpiDevice;
+use embedded_hal::spi::{ErrorType, SpiDevice};
 
 /// The error type used by this library.
 ///
 /// This can encapsulate an SPI or GPIO error, and adds its own protocol errors
 /// on top of that.
-pub enum Error<SPI: SpiDevice> {
+pub enum Error<SPI: ErrorType> {
     /// An SPI transfer failed.
     Spi(SPI::Error),
 }

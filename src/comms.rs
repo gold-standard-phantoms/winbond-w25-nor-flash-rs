@@ -16,7 +16,7 @@ impl<SPI> Debug for FlashSpi<SPI> {
     }
 }
 
-enum Opcode {
+pub(crate) enum Opcode {
     /// Read the 8-bit manufacturer and device IDs.
     ReadMfDId = 0x90,
     /// Read 16-bit manufacturer ID and 8-bit device ID.

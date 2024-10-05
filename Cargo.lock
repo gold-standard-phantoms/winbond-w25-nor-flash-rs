@@ -50,9 +50,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "embedded-hal-async"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0c4c685bbef7fe13c3c6dd4da26841ed3980ef33e841cddfa15ce8a8fb3f1884"
+dependencies = [
+ "defmt",
+ "embedded-hal",
+]
+
+[[package]]
 name = "hardware-traits"
 version = "0.1.0"
-source = "git+https://github.com/gold-standard-phantoms/hardware-traits-rs.git#5ae50df1068750de86b0a09f088c06e4b9069302"
+source = "git+https://github.com/gold-standard-phantoms/hardware-traits-rs.git?rev=6c95ad0#6c95ad06fae8cd37db0c5ef967092e3237f56acc"
 
 [[package]]
 name = "proc-macro-error"
@@ -155,5 +165,6 @@ version = "0.1.0"
 dependencies = [
  "defmt",
  "embedded-hal",
+ "embedded-hal-async",
  "hardware-traits",
 ]
