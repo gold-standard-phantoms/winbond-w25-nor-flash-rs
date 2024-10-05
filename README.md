@@ -1,7 +1,7 @@
 # Winbond W25 NOR flash driver
 
 This is a platform agnostic Rust driver for the Winbond W25X and W25Q SpiFlash
-SPI devices, using the [`embedded-hal`] (v1) traits.
+SPI devices, using the `embedded-hal` and `embedded-hal-async` (v1) traits.
 
 This driver allows you to:
 
@@ -17,6 +17,7 @@ This driver allows you to:
 It supports:
 
 - Blocking SPI using `embedded-hal 1.0`
+- Async SPI using `embedded-hal-async 1.0`
 
 ## The devices
 
