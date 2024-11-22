@@ -140,11 +140,11 @@ where
         let mut this = Self { spi, delay };
         let status = loop {
             let status = this.read_status().await?;
-            if (status & (Status::BUSY | Status::WEL)).is_empty() {
+            if (status & (Status::BUSY)).is_empty() {
                 break status;
             }
-            defmt::warn!("Flash is not ready: {:?}. Waiting for 1ms...", status);
-            this.delay.delay_ms(1).await;
+            defmt::warn!("Flash is not ready: {:?}. Waiting for 10ms...", status);
+            this.delay.delay_ms(10).await;
         };
         defmt::debug!("Initial status: {:?}", status);
         Ok(this)
