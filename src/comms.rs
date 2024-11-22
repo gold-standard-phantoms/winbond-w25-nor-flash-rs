@@ -184,7 +184,7 @@ where
         let mut this = Self { spi };
         let status = loop {
             let status = this.read_status()?;
-            if (status & (Status::BUSY | Status::WEL)).is_empty() {
+            if (status & Status::BUSY).is_empty() {
                 break status;
             }
             defmt::warn!("Flash is not ready: {:?}", status);
