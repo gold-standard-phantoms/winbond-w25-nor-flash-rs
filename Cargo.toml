@@ -1,6 +1,6 @@
 [package]
 name = "winbond-w25-nor-flash-rs"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 
 [lib]
