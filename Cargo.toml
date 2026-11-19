@@ -11,4 +11,4 @@ path = "src/lib.rs"
 defmt = "0.3"
 embedded-hal = { version = "1", features = ["defmt-03"] }
 embedded-hal-async = { version = "1", features = ["defmt-03"] }
-hardware-traits = { git = "https://github.com/gold-standard-phantoms/hardware-traits-rs.git", rev = "6c95ad0" }
+hardware-traits = { git = "https://github.com/gold-standard-phantoms/hardware-traits-rs.git", tag = "v0.1.0" }
